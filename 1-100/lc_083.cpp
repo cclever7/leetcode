@@ -12,8 +12,6 @@
 #include "../common.h"
 using namespace std;
 
-
-// 0 1 1 2
 class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
@@ -30,19 +28,3 @@ public:
         return head;
     }
 };
-
-int main() {
-    ListNode l1(1);
-    ListNode l2(1);
-    ListNode l3(2);
-    l1.next = &l2;
-    l2.next = &l3;
-
-    Solution s;
-    ListNode *l = s.deleteDuplicates(&l1);
-    while(l->next) {
-        cout << l->val << endl;
-        l = l->next;
-    }
-    return 0;
-}
